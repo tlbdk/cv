@@ -4,15 +4,14 @@
 TMPDIR=$(shell mktemp -d)
 TMPDIR:=${TMPDIR}
 TYPST_ARGS=--font-path=./fonts --package-path=./packages
-DEPENDENCIES=$(shell find src fonts modules_* -type packages -type f)
 
 # Default target
-all: cv.pdf letter.pdf
+all: resume.pdf coverletter.pdf coverletter2.pdf
 
-install: install-fonts install-packages
+download: download-fonts download-packages
 
-# Rule to install the font
-install-fonts: fonts/SourceSans3-Regular.otf fonts/SourceSansPro-Regular.otf fonts/Font\ Awesome\ 6\ Free-Regular-400.otf fonts/Roboto-Regular.ttf
+# Rule to download the font
+download-fonts: fonts/SourceSans3-Regular.otf fonts/SourceSansPro-Regular.otf fonts/Font\ Awesome\ 6\ Free-Regular-400.otf fonts/Roboto-Regular.ttf
 
 fonts/SourceSans3-Regular.otf:
 	mkdir -p fonts
@@ -38,18 +37,19 @@ fonts/Roboto-Regular.ttf:
 	unzip $(TMPDIR)/fonts.zip -d $(TMPDIR)/fonts
 	find $(TMPDIR)/fonts -type f -name "*.ttf" -exec cp {} fonts \;
 
-install-packages: packages/local/brilliant-cv/2.0.5
+download-packages: packages/local/modern-cv/0.8.0
 
-packages/local/brilliant-cv/2.0.5:
-	mkdir -p packages/local/brilliant-cv/2.0.5
-	(cd packages/local/brilliant-cv/2.0.5 && curl https://packages.typst.org/preview/brilliant-cv-2.0.5.tar.gz | tar -xz)
+packages/local/modern-cv/0.8.0:
+	mkdir -p packages/local/modern-cv/0.8.0
+	(cd packages/local/modern-cv/0.8.0 && curl https://packages.typst.org/preview/modern-cv-0.8.0.tar.gz | tar -xz)
+	patch < patches/modern-cv-0.8.0.patch
 
 # Rule to build the PDF
-%.pdf: %.typ $(DEPENDENCIES)
-	typst compile $(TYPST_ARGS) $^
+%.pdf: %.typ metadata.toml $(shell find modules_en src packages -type f)
+	typst compile $(TYPST_ARGS) $<
 
 # Clean up auxiliary files
 clean:
 	rm -f *.pdf
 
-.PHONY: all clean install install-packages install-fonts
+.PHONY: all clean download download-packages install-fonts 
