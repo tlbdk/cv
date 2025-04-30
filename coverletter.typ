@@ -2,17 +2,15 @@
 
 #show: coverletter.with(
   author: (
-    firstname: "John",
-    lastname: "Smith",
-    email: "js@gmail.com",
-    homepage: "https://example.com",
-    phone: "(+1) 111-111-1111",
-    github: "DeveloperPaul123",
-    linkedin: "John Smith",
-    address: "111 Example St. Apt. 111, Example City, EX 11111",
-    website: "https://www.github.com/DeveloperPaul123",
+    firstname: "Troels Liebe",
+    lastname: "Bentsen",
+    email: "tlb@nversion.dk",
+    phone: "(+45) 51 51 18 38",
+    github: "tlbdk",
+    linkedin: "troelsliebebentsen",
+    address: "Peter Holms Vej 11, 3. tv.\n2450 Copenhagen, Denmark",
     positions: (
-      "Software Engineer",
+      "",
       "Full Stack Developer",
     ),
   ),
@@ -26,7 +24,7 @@
   // set this to `none` to show the default or remove it completely
   closing: [],
   // see typst "page" documentation for more options
-  paper-size: "us-gov-legal"
+  paper-size: "a4"
 )
 
 #hiring-entity-info(entity-info: (

@@ -1,14 +1,26 @@
 # CV
 
-# Install
+## Install
 
 ```
 brew install typst
-make install # install packages and fonts
+make download # download packages and fonts
 ```
 
-# Build
+## Build
 
 ```
 make
+```
+
+## vscode
+
+settings.json:
+``` jsonc
+{
+    "tinymist.typstExtraArgs": [
+        "--font-path=./fonts",
+        "--package-path=./packages"
+    ]
+}
 ```

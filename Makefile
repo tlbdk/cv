@@ -45,7 +45,7 @@ packages/local/modern-cv/0.8.0:
 	patch < patches/modern-cv-0.8.0.patch
 
 # Rule to build the PDF
-%.pdf: %.typ metadata.toml $(shell find modules_en src packages -type f)
+%.pdf: %.typ metadata.toml $(shell find packages -type f)
 	typst compile $(TYPST_ARGS) $<
 
 # Clean up auxiliary files

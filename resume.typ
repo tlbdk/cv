@@ -2,22 +2,16 @@
 
 #show: resume.with(
   author: (
-    firstname: "John",
-    lastname: "Smith",
-    email: "js@example.com",
-    homepage: "https://example.com",
-    phone: "(+1) 111-111-1111",
-    github: "DeveloperPaul123",
-    twitter: "typstapp",
-    scholar: "",
-    orcid: "0000-0000-0000-000X",
-    birth: "January 1, 1990",
-    linkedin: "Example",
-    address: "111 Example St. Example City, EX 11111",
+    firstname: "Troels Liebe Bentsen",
+    lastname: "",
+    email: "tlb@nversion.dk",
+    phone: "(+45) 51 51 18 38",
+    github: "tlbdk",
+    birth: "1981",
+    linkedin: "troelsliebebentsen",
+    address: "Peter Holms Vej 11, 3tv, 2450 Copenhagen SV, Denmark",
     positions: (
-      "Software Engineer",
-      "Software Architect",
-      "Developer",
+      "Tech Leadership", "Architecture"
     ),
   ),
   profile-picture: none,
@@ -31,79 +25,86 @@
 = Experience
 
 #resume-entry(
-  title: "Senior Software Engineer",
-  location: "Example City, EX",
-  date: "2019 - Present",
-  description: "Example, Inc.",
-  title-link: "https://github.com/DeveloperPaul123",
+  title: "VP of Engineering",
+  location: "Copenhagen, Denmark",
+  date: "2024-12 - 2025-04",
+  description: "Portchain ApS",
+  title-link: "https://portchain.com",
 )
 
 #resume-item[
-  - #lorem(20)
-  - #lorem(15)
-  - #lorem(25)
+  Portchain provides digitized information-sharing system that transforms the industry, enabling Just-In-Time operations, and significantly boosting productivity while reducing emissions. By combining intuitive UX design with advanced analytics and cutting-edge web technologies, Portchain enhances operational performance for shipping companies.
+]
+
+#resume-item[
+  TODO
 ]
 
 #resume-entry(
-  title: "Software Engineer",
-  location: "Example City, EX",
-  date: "2011 - 2019",
-  description: "Previous Company, Inc.",
+  title: "Chief Technical Officer",
+  location: "Copenhagen, Denmark",
+  date: "2017-05 - 2025-12",
+  description: "Connected Cars A/S",
 )
 
 #resume-item[
-  // content doesn't have to be bullet points
-  #lorem(72)
+  Connected Cars is a midsized auto-tech company focusing on importers, leasing and dealerships. It was founded in 2016 by Semler Group to give car owners a better digital experience by utilizing in-vehicle data. (know as minVolkswagen, minSeat, minSkoda, mitAudi in Denmark and under many different brands globally). 
+]
+#resume-item[
+  As CTO I helped build a strong self managing engineering team of 35 people and rebuilt the initial proof of concept the company was launched on so it was capable of scaling to multi-regional global deployment covering EMEA, APAC and LATAM. The tech stack covered frontend, mobile, backend, datascience, hardware and embedded development. I also did vendor management, negotiated contracts, set up compliance processes and helped with global homologation.
 ]
 
 #resume-entry(
-  title: "Intern",
-  location: "Example City, EX",
+  title: "Architect and Backend Developer",
+  location: "Copenhagen, Denmark",
+  date: "2016-04 - 2017-04",
+  description: "Danske Bank, MobileLife",
 )
-
 #resume-item[
-  - #lorem(20)
-  - #lorem(15)
-  - #lorem(25)
-]
-
-= Projects
-
-#resume-entry(
-  title: "Thread Pool C++ Library",
-  location: [#github-link("DeveloperPaul123/thread-pool")],
-  date: "May 2021 - Present",
-  description: "Designer/Developer",
-)
-
-#resume-item[
-  - Designed and implemented a thread pool library in C++ using the latest C++20 and C++23 features.
-  - Wrote extensive documentation and unit tests for the library and published it on Github.
+  Help build "June" a June by Danske Bank, an award-winning digital investment and advisory platform named Best Robo-Advisor in Europe by the Financial Times. My main focus areas was on the backend architecture, security, customer on-boarding and tech team recruitment.
 ]
 
 #resume-entry(
-  title: "Event Bus C++ Library",
-  location: github-link("DeveloperPaul123/eventbus"),
-  date: "Sep. 2019 - Present",
-  description: "Designer/Developer",
+  title: "Expert IT Architect",
+  location: "Copenhagen, Denmark",
+  date: "2015-01 - 2016-03",
+  description: "Nordea, Digital Banking",
+)
+#resume-item[
+ IT Architect on basic banking API(REST, Open ID Connect, JWT, JSON, Java 8, Spring Boot, CompletableFuture, RXJava), integration towards mainframe systems(COBOL, CopyBook), design of device binding for Android and IOS(TrustZone, TEE, Public-key cryptography, Oracle DB), design of authentication provider for mobile and web(NemID, BankID, JTW). Part of team that build cross country async mainframe connector based on Netty.
+]
+
+#resume-entry(
+  title: "Partner / CTO",
+  location: "Copenhagen, Denmark",
+  date: "2009-01 - 2014-05",
+  description: "IT-Kartellet",
+)
+#resume-item[
+ IT-Kartellet is an IT consultancy that does software development, technical project management, design and solution architecture on a number of different platforms and technologies. I was one of the two founding partners and helped build the company to 17 employees. I had many different roles during my time there, but one of my key roles was always ensuring technical excellence both when hiring new employees, and when delivering to customers.
+]
+#resume-item[
+ - Damco(Maersk group) - IT Architect, Lead Developer and Technical project manager (4 years)
+ - Copenhagen Business School - Technical project manager and developer (1 year) 
+ - Novasol - Devops specialist and developer
+ - Nota - Developer
+]
+
+#resume-entry(
+  title: "Student and other jobs",
+  location: "Copenhagen, Denmark",
+  date: "1998 - 2009",
+  description: "Various",
 )
 
 #resume-item[
-  - Designed and implemented an event bus library using C++17.
-  - Wrote detailed documentation and unit tests for the library and published it on Github.
+  - System Administrator and Developer at InfoPro ApS (2008-2009)
+  - IT administrator at The National Union of Students in Denmark (DSF) (2006-2007)
+  - System Administrator at IT University of Copenhagen (ITU) (2003-2005)
+  - Linux Consultant at Xenux ApS (2003)
+  - Unix/Linux Consultant at catpipe Systems ApS (2002)
+  - Pc-supporter at Rigshospitalet (1998-1999)
 ]
-
-= Skills
-
-#resume-skill-item(
-  "Languages",
-  (strong("C++"), strong("Python"), "Java", "C#", "JavaScript", "TypeScript"),
-)
-#resume-skill-item("Spoken Languages", (strong("English"), "Spanish"))
-#resume-skill-item(
-  "Programs",
-  (strong("Excel"), "Word", "Powerpoint", "Visual Studio"),
-)
 
 = Education
 
@@ -115,8 +116,7 @@
 )
 
 #resume-item[
-  - Member of CBS Students Board
-  - Co-organizer of CBS Case Competition
+  Member of CBS Students Board, Co-organizer of CBS Case Competition
 ]
 
 #resume-entry(
@@ -127,10 +127,7 @@
 )
 
 #resume-item[
-  - Member of DSR Internation forum
-  - Member of Board of Studies
-  - Member of the party committee
-  - Member of CBS International Committee.
+  Member of DSR Internation forum, Board of Studies, Party committee, CBS International Committee.
 ]
 
 
