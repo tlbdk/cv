@@ -11,10 +11,10 @@
     linkedin: "troelsliebebentsen",
     address: "Peter Holms Vej 11, 3tv, 2450 Copenhagen SV, Denmark",
     positions: (
-      "Tech Leadership", "Architecture"
+      "Tech Leadership", "Cloud Architecture", "Software Development", "DevOps", "Embedded Systems",
     ),
   ),
-  profile-picture: none,
+  profile-picture: image("./img/tlb-dark.jpg"),
   date: datetime.today().display(),
   language: "en",
   colored-headers: true,
@@ -22,10 +22,19 @@
   paper-size: "a4",
 )
 
+= Summary
+#resume-item[
+  I’m passionate about technology, people, culture and building high-performing tech companies that deliver real business value with minimal overhead, low employee turnover and a healthy culture. I have worked with all aspects of technology for over 20 years, in small and large organisations, as a founder, consultant, software developer, architect and engineering manager at all levels.
+]
+
+#resume-item[
+  Personally I’m a father of two, I love to travel and I’m a big fan of the outdoors. I enjoy hiking, biking, running and swimming. I also love to listen to audiobooks, especially about history, technology and global affairs.
+]
+
 = Experience
 
 #resume-entry(
-  title: "VP of Engineering",
+  title: "Interim VP of Engineering",
   location: "Copenhagen, Denmark",
   date: "2024-12 - 2025-04",
   description: "Portchain ApS",
@@ -35,9 +44,8 @@
 #resume-item[
   Portchain provides digitized information-sharing system that transforms the industry, enabling Just-In-Time operations, and significantly boosting productivity while reducing emissions. By combining intuitive UX design with advanced analytics and cutting-edge web technologies, Portchain enhances operational performance for shipping companies.
 ]
-
 #resume-item[
-  TODO
+  As interim VP of Engineering I help hire the initial onsite engineering team, help clean up software licenses and significantly reduced non-fte costs. I also helped set a new technical direction and culture for the company that will allow them to scale their engineering team going forward. I also managed the exsiting engineering team and helped them with their day to day work until the new VP of Engineering was hired.
 ]
 
 #resume-entry(
@@ -55,13 +63,16 @@
 ]
 
 #resume-entry(
-  title: "Architect and Backend Developer",
+  title: "Team lead and Backend Developer",
   location: "Copenhagen, Denmark",
   date: "2016-04 - 2017-04",
   description: "Danske Bank, MobileLife",
 )
 #resume-item[
-  Help build "June" a June by Danske Bank, an award-winning digital investment and advisory platform named Best Robo-Advisor in Europe by the Financial Times. My main focus areas was on the backend architecture, security, customer on-boarding and tech team recruitment.
+  Danske Bank is a Nordic bank with 3.5 million customers and 20,000 employees.
+]
+#resume-item[
+   I was part of the MobileLife team that was responsible for building the next generation of banking products. The team was a mix of internal and external resources and was responsible for building the backend services and APIs for June by Danske Bank, an award-winning digital investment and advisory platform named Best Robo-Advisor in Europe by the Financial Times. My main focus areas was on the backend architecture, security, customer on-boarding and tech team recruitment.
 ]
 
 #resume-entry(
@@ -71,7 +82,10 @@
   description: "Nordea, Digital Banking",
 )
 #resume-item[
- IT Architect on basic banking API(REST, Open ID Connect, JWT, JSON, Java 8, Spring Boot, CompletableFuture, RXJava), integration towards mainframe systems(COBOL, CopyBook), design of device binding for Android and IOS(TrustZone, TEE, Public-key cryptography, Oracle DB), design of authentication provider for mobile and web(NemID, BankID, JTW). Part of team that build cross country async mainframe connector based on Netty.
+  Nordea is a Nordic bank with 10 million customers and 31,000 employees. 
+]
+#resume-item[
+  I was part of the Digital Banking team that was responsible for building the next generation of mobile banking apps for the bank. The team was a mix of internal and external resources and was responsible for building the backend services and APIs for Nordea's mobile banking platform. My main focus areas was on the backend architecture, security, customer on-boarding and tech team recruitment.
 ]
 
 #resume-entry(

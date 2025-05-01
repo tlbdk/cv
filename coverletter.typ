@@ -14,7 +14,7 @@
       "Full Stack Developer",
     ),
   ),
-  profile-picture: image("./profile.png"),
+  profile-picture: image("./img/tlb-dark.jpg"),
   // change this to match the language available in 'lang.toml'
   language: "en",
   font: "Times New Roman",

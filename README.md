@@ -24,3 +24,9 @@ settings.json:
     ]
 }
 ```
+
+https://typst.app/universe/package/grotesk-cv
+
+https://typst.app/universe/package/vantage-cv
+
+https://typst.app/universe/package/metronic
