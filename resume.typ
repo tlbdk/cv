@@ -1,5 +1,7 @@
 #import "@local/modern-cv:0.8.0": *
 
+#let extended = sys.inputs.at("output", default: "simple").contains("extended")
+
 #show: resume.with(
   author: (
     firstname: "Troels Liebe Bentsen",
@@ -36,7 +38,7 @@
 #resume-entry(
   title: "Interim VP of Engineering",
   location: "Copenhagen, Denmark",
-  date: "2024-12 - 2025-04",
+  date: "2024-12 - 2025-04 (5 months)",
   description: "Portchain ApS",
   title-link: "https://portchain.com",
 )
@@ -45,27 +47,46 @@
   Portchain provides digitized information-sharing system that transforms the industry, enabling Just-In-Time operations, and significantly boosting productivity while reducing emissions. By combining intuitive UX design with advanced analytics and cutting-edge web technologies, Portchain enhances operational performance for shipping companies.
 ]
 #resume-item[
-  As interim VP of Engineering I help hire the initial onsite engineering team, help clean up software licenses and significantly reduced non-fte costs. I also helped set a new technical direction and culture for the company that will allow them to scale their engineering team going forward. I also managed the exsiting engineering team and helped them with their day to day work until the new VP of Engineering was hired.
+  As interim VP of Engineering I helped hire the initial onsite engineering team, helped clean up software licenses and significantly reduced non-fte costs. I also helped set a new technical direction and culture for the company that will allow them to scale their engineering team going forward. I also managed the exsiting engineering team and helped them with their day to day work until the new VP of Engineering was hired.
+]
+#if extended [
+  #resume-item[
+    - Google Cloud, AWS, Google Workspace, NodeJS, TypeScript, CloudRun, Github Actions 
+    - Hiring, Team building, Culture, Process
+  ]
 ]
 
 #resume-entry(
   title: "Chief Technical Officer",
   location: "Copenhagen, Denmark",
-  date: "2017-05 - 2025-12",
+  date: "2017-05 - 2024-12 (7 years)",
   description: "Connected Cars A/S",
 )
 
 #resume-item[
   Connected Cars is a midsized auto-tech company focusing on importers, leasing and dealerships. It was founded in 2016 by Semler Group to give car owners a better digital experience by utilizing in-vehicle data. (know as minVolkswagen, minSeat, minSkoda, mitAudi in Denmark and under many different brands globally). 
 ]
-#resume-item[
-  As CTO I helped build a strong self managing engineering team of 35 people and rebuilt the initial proof of concept the company was launched on so it was capable of scaling to multi-regional global deployment covering EMEA, APAC and LATAM. The tech stack covered frontend, mobile, backend, datascience, hardware and embedded development. I also did vendor management, negotiated contracts, set up compliance processes and helped with global homologation.
+#if extended [
+  #resume-item[
+    Put simply, a box is installed in your car and you get a nice app that shows charge/fuel level, health, drive history, service, etc. and the workshops get a web app where they can manage their customers so service calls, oil changes, repairs, etc. are automated based on the data from the car leading to more loyal customers and more efficient workshops.
+  ]
 ]
+#resume-item[
+  As CTO I helped build a strong self managing engineering team of 35 people and rebuilt the initial proof of concept the company was launched on so it was capable of scaling to multi-regional global deployment covering EMEA, APAC and LATAM with close to half a million installations and terabytes of data ingested per month. The tech stack covered frontend, mobile, backend, datascience, hardware and embedded development. I also did vendor management, negotiated contracts, set up compliance processes, helped with global homologation, customer security reviews and approvals for large customers like Volkswagen, Postnord, CPH Airport, Ayvens and many others.
+]
+#if extended [
+  #resume-item[
+    - Google Cloud, Google Workspace, React, ReactNative, NodeJS, TypeScript, C, Rust, Python, Go, Kubernetes, MySQL, BigQuery, Yocto, Embedded Linux, CI/CD, CloudBuild, Github Actions
+    - Hiring, Agile, Team building, Culture, Process, Security, Architecture, DevOps, CI/CD
+    - TISAX, ISO27001, ISO9001, GDPR, CIS18, UNECE R155/R156
+  ]
+]
+
 
 #resume-entry(
   title: "Team lead and Backend Developer",
   location: "Copenhagen, Denmark",
-  date: "2016-04 - 2017-04",
+  date: "2016-04 - 2017-04 (1 year)",
   description: "Danske Bank, MobileLife",
 )
 #resume-item[
@@ -74,11 +95,17 @@
 #resume-item[
    I was part of the MobileLife team that was responsible for building the next generation of banking products. The team was a mix of internal and external resources and was responsible for building the backend services and APIs for June by Danske Bank, an award-winning digital investment and advisory platform named Best Robo-Advisor in Europe by the Financial Times. My main focus areas was on the backend architecture, security, customer on-boarding and tech team recruitment.
 ]
+#if extended [
+  #resume-item[
+    - AWS, TFS, .Net, C\#, SQL Server, Mainframe, Java, Go
+    - Hiring, Security, Architecture, DevOps, CI/CD, Agile
+  ]
+]
 
 #resume-entry(
   title: "Expert IT Architect",
   location: "Copenhagen, Denmark",
-  date: "2015-01 - 2016-03",
+  date: "2015-01 - 2016-03 (1 year)",
   description: "Nordea, Digital Banking",
 )
 #resume-item[
@@ -88,10 +115,17 @@
   I was part of the Digital Banking team that was responsible for building the next generation of mobile banking apps for the bank. The team was a mix of internal and external resources and was responsible for building the backend services and APIs for Nordea's mobile banking platform. My main focus areas was on the backend architecture, security, customer on-boarding and tech team recruitment.
 ]
 
+#if extended [
+  #resume-item[
+    - AWS, Kotlin, Java, SpringBoot, Oracle, SQL Server, Mainframe
+    - Hiring, Security, Architecture, Team building, Culture, Process
+  ]
+]
+
 #resume-entry(
   title: "Partner / CTO",
   location: "Copenhagen, Denmark",
-  date: "2009-01 - 2014-05",
+  date: "2009-01 - 2014-05 (5 years)",
   description: "IT-Kartellet",
 )
 #resume-item[
@@ -105,9 +139,9 @@
 ]
 
 #resume-entry(
-  title: "Student and other jobs",
+  title: "Other jobs",
   location: "Copenhagen, Denmark",
-  date: "1998 - 2009",
+  date: "1998 - 2009 (11 years)",
   description: "Various",
 )
 
@@ -143,6 +177,3 @@
 #resume-item[
   Member of DSR Internation forum, Board of Studies, Party committee, CBS International Committee.
 ]
-
-
-
