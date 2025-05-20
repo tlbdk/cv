@@ -2,28 +2,28 @@
 
 #show: coverletter.with(
   author: (
-    firstname: "John",
-    lastname: "Smith",
-    email: "js@gmail.com",
-    homepage: "https://example.com",
-    phone: "(+1) 111-111-1111",
-    github: "DeveloperPaul123",
-    linkedin: "John Smith",
-    address: "111 Example St. Apt. 111, Example City, EX 11111",
+    firstname: "Troels Liebe",
+    lastname: "Bentsen",
+    email: "troelsliebebentsen@gmail.com",
+    homepage: "https://tlbdk.github.io",
+    phone: "(+45) 51 51 18 38",
+    github: "tlbdk",
+    linkedin: "https://www.linkedin.com/in/troelsliebebentsen/",
+    address: "Peter Holms Vej 11, 3. tv.\n2450 Copenhagen, Denmark",
     positions: (
       "Software Engineer",
       "Full Stack Developer",
     ),
   ),
   profile-picture: none,
-  language: "sp",
+  language: "dk",
 )
 
 #hiring-entity-info(entity-info: (
-  target: "Company Recruitement Team",
-  name: "Google, Inc.",
-  street-address: "1600 AMPHITHEATRE PARKWAY",
-  city: "MOUNTAIN VIEW, CA 94043",
+  target: "Some Company Recruitement Team",
+  name: "Some Company, Inc.",
+  street-address: "Some Street 123",
+  city: "Some City, Some State 12345",
 ))
 
 #letter-heading(

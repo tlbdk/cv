@@ -25,12 +25,18 @@
 )
 
 = Summary
-#resume-item[
-  I’m passionate about technology, people, culture and building high-performing tech companies that deliver real business value with minimal overhead, low employee turnover and a healthy culture. I have worked with all aspects of technology for over 20 years, in small and large organisations, as a founder, consultant, software developer, architect and engineering manager at all levels.
-]
-
-#resume-item[
-  Personally I’m a father of two, I love to travel and I’m a big fan of the outdoors. I enjoy hiking, biking, running and swimming. I also love to listen to audiobooks, especially about history, technology and global affairs.
+#block(above: 1em, below: 1em)[
+  #resume-item[
+    I’m passionate about technology, people, culture and building high-performing tech companies that deliver real business value with minimal overhead, low employee turnover and a healthy culture. I have worked with all aspects of technology for over 20 years, in small and large organisations, as a founder, consultant, software developer, architect and engineering manager at all levels.
+  ]
+  #if extended [
+    #resume-item[
+      I still love to code and I’m a strong believer in the importance of hands-on experience and technical excellence. I have a strong background in software development, cloud architecture, DevOps and embedded systems. I have worked with a wide range of technologies and platforms, including Google Cloud, AWS, Azure, Kubernetes, NodeJS, TypeScript, Go, Rust, C, Java, Kotlin and many more.
+    ]
+  ]
+  #resume-item[
+    Personally I’m a father of two, I love to travel and I’m a big fan of the outdoors. I enjoy hiking, biking, running and swimming. I also love to listen to audiobooks, especially about history, technology and global affairs.
+  ]
 ]
 
 = Experience
@@ -47,7 +53,7 @@
   Portchain provides digitized information-sharing system that transforms the industry, enabling Just-In-Time operations, and significantly boosting productivity while reducing emissions. By combining intuitive UX design with advanced analytics and cutting-edge web technologies, Portchain enhances operational performance for shipping companies.
 ]
 #resume-item[
-  As interim VP of Engineering I helped hire the initial onsite engineering team, helped clean up software licenses and significantly reduced non-fte costs. I also helped set a new technical direction and culture for the company that will allow them to scale their engineering team going forward. I also managed the exsiting engineering team and helped them with their day to day work until the new VP of Engineering was hired.
+  As interim VP of Engineering I helped hire the initial onsite engineering team, helped clean up software licenses and significantly reduced non-fte costs. I also helped set a new technical direction and culture for the company that will allow them to scale their engineering team going forward. I also managed the existing engineering team and helped them with their day to day work until the new VP of Engineering was hired.
 ]
 #if extended [
   #resume-item[
@@ -84,7 +90,7 @@
 
 
 #resume-entry(
-  title: "Team lead and Backend Developer",
+  title: "Backend Developer and Architect",
   location: "Copenhagen, Denmark",
   date: "2016-04 - 2017-04 (1 year)",
   description: "Danske Bank, MobileLife",
@@ -176,4 +182,21 @@
 
 #resume-item[
   Member of DSR Internation forum, Board of Studies, Party committee, CBS International Committee.
+]
+
+= Projects
+#block(above: 1em, below: 1em)[
+  #resume-item[
+    I created a number of open source projects over the years. Some of them are listed below. I have also contributed to a number of other open source projects, including the NodeJS, Linux kernel, Docker, Kubernetes, and many others.
+  ]
+  
+  #show link: underline
+  #resume-item[
+    - #link("https://github.com/tlbdk/node-object-validator")[Object Validator]: Composable input validator for TypeScript with automatic compile time type interference and runtime code generation for maximum performance. 10x faster than most other alternatives.
+    - #link("https://github.com/tlbdk/auth-wrapper")[Auth wrapper]: Command wrapper written in Go that exposes an ssh-agent to all sub processes with keys and ssh certs backed by Google Cloud KMS or local OpenSSH pem formatted keys.
+    - #link("https://github.com/tlbdk/node-jwtutils")[JWT utils]: Zero dependency flexible JWT encoding and decoding written in JavaScript for NodeJS.
+    - #link("https://github.com/tlbdk/rootfs-diff")[RootFS Diff]: Tool to compare embedded Linux root images and see the diff between them. Written in TypeScript.
+    - #link("https://github.com/tlbdk/zimage-tools")[ZImage Tools]: Tools to decompress Linux kernel zImage files supporting most of the common compression formats.
+    - #link("https://github.com/tlbdk/node-xmlexact")[XmlExact]: Simplifies working with complex XML documents from JavaScript without the XML suck. Written in JavaScript for NodeJS.
+  ]
 ]

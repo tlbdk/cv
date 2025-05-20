@@ -28,10 +28,10 @@
 )
 
 #hiring-entity-info(entity-info: (
-  target: "Company Recruitement Team",
-  name: "Google, Inc.",
-  street-address: "1600 AMPHITHEATRE PARKWAY",
-  city: "MOUNTAIN VIEW, CA 94043",
+  target: "Some Company Recruitement Team",
+  name: "Some Company, Inc.",
+  street-address: "Some Street 123",
+  city: "Some City, Some State 12345",
 ))
 
 #letter-heading(
