@@ -10,7 +10,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-# TODO: Look at multi-platform support: https://andrewlock.net/combining-multiple-docker-images-into-a-multi-arch-image/ , https://github.com/sredevopsorg/multi-arch-docker-github-workflow
+# TODO: Look at multi-platform support: https://andrewlock.net/combining-multiple-docker-images-into-a-multi-arch-image/ , https://github.com/sredevopsorg/multi-arch-docker-github-workflow , https://docs.docker.com/build/building/multi-platform/#cross-compiling-a-go-application
 # * 1. Build in separate jobs
 # * 2. Test images before they are pushed to the registry
 # * 3. Merge images into a multi-arch image if all of them pass
