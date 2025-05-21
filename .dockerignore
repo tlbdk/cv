@@ -1,0 +1,6 @@
+.github
+packages
+fonts
+.vscode
+/*.pdf
+Dockerfile

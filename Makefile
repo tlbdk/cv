@@ -8,7 +8,7 @@ TYPST_ARGS=--font-path ./fonts --package-path ./packages
 # Default target
 all: resume.pdf resume-extended.pdf coverletter.pdf coverletter2.pdf
 
-install: fonts packages
+install-deps: fonts packages
 
 # Rule to download the font
 define download-fonts-zip
@@ -38,7 +38,7 @@ packages: packages/local/modern-cv/0.8.0
 packages/local/modern-cv/0.8.0:
 	mkdir -p packages/local/modern-cv/0.8.0
 	(cd packages/local/modern-cv/0.8.0 && curl https://packages.typst.org/preview/modern-cv-0.8.0.tar.gz | tar -xz)
-	patch < patches/modern-cv-0.8.0.patch
+	patch -p1 < patches/modern-cv-0.8.0.patch
 
 # Rule to build the PDF
 %.pdf: %.typ metadata.toml $(shell find packages fonts -type f 2>/dev/null)
@@ -54,4 +54,4 @@ distclean: clean
 	rm -rf packages
 	rm -rf fonts
 
-.PHONY: all clean packages fonts install
+.PHONY: all clean distclean packages fonts install-deps 

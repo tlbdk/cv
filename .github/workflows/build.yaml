@@ -1,0 +1,20 @@
+name: Build pdfs
+
+on:
+  # Trigger the workflow every time you push to the `main` branch
+  push:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build site with docker
+        run: |
+          docker build --progress=plain --output type=local,dest=./ .
