@@ -26,7 +26,7 @@ jobs:
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Build container with github
         run: |
-          docker buildx build --platform=linux/amd64,linux/arm64 --progress=plain --tag ghcr.io/${{ github.repository_owner }}/typst:latest --tag ghcr.io/${{ github.repository_owner }}/typst:${{ github.sha }} docker-typst
+          docker build --progress=plain --tag ghcr.io/${{ github.repository_owner }}/typst:latest --tag ghcr.io/${{ github.repository_owner }}/typst:${{ github.sha }} docker-typst
       - name: Push container
         run: |
           docker push --all-tags ghcr.io/${{ github.repository_owner }}/typst
