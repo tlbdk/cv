@@ -26,4 +26,4 @@ jobs:
           docker build --progress=plain --tag ghcr.io/${{ github.repository_owner }}/typst:latest --tag ghcr.io/${{ github.repository_owner }}/typst:${{ github.sha }} .
       - name: Push container
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/typst:latest ghcr.io/${{ github.repository_owner }}/typst:${{ github.sha }}
+          docker push --all-tags ghcr.io/${{ github.repository_owner }}/typst
