@@ -6,9 +6,24 @@ This repo generates Troels Liebe Bentsen Curriculum vitae using [Typst](https://
 
 ## Install
 
-```
+MacOS:
+``` bash
 brew install typst
-make download # download packages and fonts
+make install-deps # download packages and fonts
+```
+
+Linux:
+``` bash
+# Make sure you have installed the Microsoft TrueType core fonts as the template uses Times New Roman
+apt install ttf-msttcorefonts-installer
+update-ms-fonts
+fc-update
+
+# Or use your favorite package tool
+curl -L "https://github.com/typst/typst/releases/download/v0.13.1/typst-x86_64-unknown-linux-musl.tar.xz" -o typst.tar.xz \
+    && tar -xf typst.tar.xz -C /usr/local/bin --strip-components=1 typst-x86_64-unknown-linux-musl/typst \
+    && rm typst.tar.xz
+make install-deps # download packages and fonts
 ```
 
 ## Build

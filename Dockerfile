@@ -8,8 +8,7 @@ RUN apk add --update \
 
 # Install Microsoft fonts
 RUN update-ms-fonts
-RUN mkdir -p /app/fonts
-RUN cp /usr/share/fonts/truetype/msttcorefonts/*.ttf /app/fonts
+RUN mkdir -p /app/fonts && cp /usr/share/fonts/truetype/msttcorefonts/*.ttf /app/fonts
 
 # Install Typst
 RUN curl -L "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" -o typst.tar.xz \
