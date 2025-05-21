@@ -29,10 +29,8 @@
   #resume-item[
     I’m passionate about technology, people, culture and building high-performing tech companies that deliver real business value with minimal overhead, low employee turnover and a healthy culture. I have worked with all aspects of technology for over 20 years, in small and large organisations, as a founder, consultant, software developer, architect and engineering manager at all levels.
   ]
-  #if extended [
-    #resume-item[
-      I still love to code and I’m a strong believer in the importance of hands-on experience and technical excellence. I have a strong background in software development, cloud architecture, DevOps and embedded systems. I have worked with a wide range of technologies and platforms, including Google Cloud, AWS, Azure, Kubernetes, NodeJS, TypeScript, Go, Rust, C, Java, Kotlin and many more.
-    ]
+  #resume-item[
+    I still love to code and I’m a strong believer in the importance of hands-on experience and technical excellence. I have a strong background in software development, cloud architecture, DevOps and embedded systems. I have worked with a wide range of technologies and platforms, including Google Cloud, AWS, Azure, Kubernetes, NodeJS, TypeScript, Go, Rust, C, Java, Kotlin and many more.
   ]
   #resume-item[
     Personally I’m a father of two, I love to travel and I’m a big fan of the outdoors. I enjoy hiking, biking, running and swimming. I also love to listen to audiobooks, especially about history, technology and global affairs.
