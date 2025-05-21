@@ -1,0 +1,28 @@
+name: Build base container
+
+on:
+  # Trigger the workflow every time you push to the `main` branch
+  push:
+    branches: [ main ]
+    paths:
+      - docker-typst/**
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: Docker login
+        run:
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      - name: Build container with github
+        run: |
+          docker build --progress=plain --tag ghcr.io/${{ github.repository_owner }}/typst:latest --tag ghcr.io/${{ github.repository_owner }}/typst:${{ github.event.inputs.commit_sha }}
+      - name: Push container
+        run: |
+          docker push ghcr.io/${{ github.repository_owner }}/typst:latest ghcr.io/${{ github.repository_owner }}/typst:${{ github.event.inputs.commit_sha }}

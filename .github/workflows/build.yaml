@@ -4,6 +4,8 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   push:
     branches: [ main ]
+    paths-ignore:
+      - docker-typst/**
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
