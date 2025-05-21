@@ -11,6 +11,9 @@ on:
   workflow_dispatch:
 
 # TODO: Look at multi-platform support: https://andrewlock.net/combining-multiple-docker-images-into-a-multi-arch-image/
+# * 1. Build in separate jobs
+# * 2. Test images before they are pushed to the registry
+# * 3. Merge images into a multi-arch image if all of them pass
 
 jobs:
   build:
