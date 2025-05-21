@@ -1,9 +1,10 @@
-name: Build pdfs
+name: Build pdfs and create a release
 
 on:
   # Trigger the workflow every time you push to the `main` branch
   push:
-    branches: [ main ]
+    tags:
+      - "v*"
     paths-ignore:
       - docker-typst/**
       - .github/workflows/build-docker-typst.yaml
@@ -13,6 +14,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
@@ -21,3 +24,12 @@ jobs:
       - name: Build site with docker
         run: |
           docker build --progress=plain --output type=local,dest=./ .
+      - name: Create release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="${TAG#v}" \
+              --generate-notes
